@@ -1,0 +1,376 @@
+/* TEMA LIGHT DO PORTFOLIO
+
+Paleta de Cores: https://colorhunt.co/palette/225760
+
+Fontes usadas: 
+font-family: 'Anton', sans-serif;  ----> Headlines
+font-family: 'Roboto', sans-serif; ----> Body
+*/
+
+/*Variables da Paleta de Cores*/
+:root {
+  /*Light-Mode*/
+  --light-primary: #1687a7;
+  --light-secondary: #276678;
+  --light-background: #ffff;
+  --light-fontcolor: black;
+
+  /*Dark-Mode*/
+  --dark-primary: #30475e;
+  --dark-secondary: #1d2c3a;
+  --dark-background: #222831;
+  --dark-fontcolor: #dddddd;
+}
+
+.highlighted {
+  color: var(--light-primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  margin: 0px;
+  height: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 40vw; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: var(--light-primary); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--light-secondary);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-columns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.skill-icon {
+  min-width: 30px;
+  max-width: 30px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  position: absolute;
+  right: 15px;
+  bottom: 350px;
+  z-index: 2;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--light-primary);
+  background-repeat: repeat;
+  color: white;
+  padding: 0;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: 0.5s; /* If you want a transition effect */
+  padding: 20px;
+  height: 100vh;
+  z-index: 1;
+  margin-left: 40vw;
+  margin-right: 5vw;
+}
+
+/*---------------SIDEBAR ITEMS--------------*/
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.nav-collapsed {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 20vw;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+a.collapsed {
+  margin: 1rem;
+  padding: 0;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconw {
+  transform: scale(1.5);
+}
+
+.profilepic {
+  width: 15rem;
+  border-radius: 50%;
+  box-shadow: 5px 5px 63px -12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  margin: 1rem 0 1rem 0;
+  transition: 0.5s ease;
+}
+
+.h2-no-margin {
+  margin: 0;
+}
+
+/*------------TOOLTIP-----------------*/
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*-------------------------Tool-tip container left-------------------*/
+
+/* Tooltip container */
+.tooltipleft {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltipleft .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipleft:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Tooltip arrow */
+.tooltipleft .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipleft:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*-------------------------------------------*/
+
+/*---------------PORTFOLIO--------------------*/
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #d3e0ea;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  width: 20vw;
+  border: 1px solid #a1afb9;
+  text-align: center;
+  box-shadow: 0px 2px 32px -12px rgba(0, 0, 0, 0.46);
+}
+
+.project-img {
+  width: 100%;
+}
+
+/*-------------RESPONSIVENESS-------------*/
+
+@media only screen and (max-width: 812px) {
+  /* Sidebar responsivo */
+
+  .profile-container {
+    margin-top: 10vh;
+  }
+
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+  .sidebar {
+    width: 20vw;
+  }
+  .profilepic {
+    width: 5rem;
+  }
+  /* Fontes */
+
+  .sidebar a {
+    padding: 4px 4px 4px 16px;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p.email {
+    font-size: 10px;
+  }
+
+  /* Flex */
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .tooltip .tooltiptext {
+    font-size: 7px;
+    width: 90px;
+
+    /* Position the tooltip text */
+    bottom: 120%;
+    left: 120%;
+  }
+
+  #main {
+    margin: 0 0 0 150px;
+    padding: 0 0 2rem 0;
+  }
+}

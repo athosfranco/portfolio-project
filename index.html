@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!---Metatags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---Google Fonts & FontAwesome links-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+
+    <!---Stylesheet Links-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    
+    
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a id="arrowleft" href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-arrow-circle-left"></i></a>
+
+        <div id="profile-container" class="profile-container">
+            <img class="profilepic" src="img/profilepic.jpg" alt="Profile Picture">
+            <p><i class="fas fa-user"></i> Athos Feitosa</p>
+            <p class="email"><i class=" fas fa-envelope"></i> athos.francof@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Brazil, MA</p>            
+        </div>
+
+        <nav id="nav-container" class="nav-container">
+            <a href="#main"><i class="iconw tooltip fas fa-user-circle"><span class="tooltiptext">About Me</span></i></a>
+            <a href="#skills"><i class="iconw tooltip fas fa-laptop-code"><span class="tooltiptext">My Skills</span></i></a>
+            <a href="#portfolio"><i class="iconw tooltip fas fa-th-large"><span class="tooltiptext">My Portfolio</span></i></a>
+        </nav>
+
+        <div id="navcollapsed" class="nav-collapsed">
+            <div class="flex-container">
+                
+                <button id="openbtn" class="openbtn" onclick="openNav()"><i class="fas fa-arrow-right"></i></i></i></button>
+                
+                
+                <div>
+                    <a class="collapsed" href="#about"><i class="iconw tooltipleft fas fa-user-circle"><span class="tooltiptext">About Me</span></i></a>
+                    <a class="collapsed" href="#skills"><i class="iconw tooltipleft fas fa-laptop-code"><span class="tooltiptext">My Skills</span></i></a>
+                    <a class="collapsed" href="#portfolio"><i class="iconw tooltipleft fas fa-th-large"><span class="tooltiptext">My Portfolio</span></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="icon-container" class="icon-container">
+            <a href="#"><i class="iconw tooltip fab fa-linkedin"><span class="tooltiptext">My LinkedIn</span></i></a>
+            <a href="#"><i class="iconw tooltip fab fa-whatsapp-square"><span class="tooltiptext">Talk to me on WhatsApp</span></i></a>
+            <a href="#"><i class="iconw tooltip fab fa-github-square"><span class="tooltiptext">My Github Profile</span></i></a>
+            
+        </div>        
+
+    </div>
+      
+    <section id="main">   
+        <div class="about">
+            <h1 id="mainheadline">Hello! My name is Athos and i'm a <span class="highlighted" >Full Stack Web Developer</span>.</h1>
+            <h2>I create full webpages and webapps, from the front-end all the way to the server side, with special attention to UX/UI design.
+                I firm knowledge on CSS and modern JavaScript, including most recent and popular frameworks like React and Bootstrap. You can scroll down to read more about my skills.            
+            </h2> 
+        </div>            
+
+        <div class="skills" id="skills">                
+            <h1>Skills</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit ut aliquam purus. Senectus et netus et malesuada fames ac.</h2>
+            <div class="skills-columns-container">
+                <div class="flex-container">
+                    <h2 class="h2-no-margin"><i class="skill-icon fab fa-html5"></i> HTML5</h2>
+                    <h2 class="h2-no-margin"><i class="skill-icon fab fa-css3-alt"></i> CSS3</h2>   
+                    <h2 class="h2-no-margin"><i class="skill-icon fab fa-sass"></i> Sass</h2>  
+                    <h2 class="h2-no-margin"><i class="skill-icon fab fa-bootstrap"></i> Bootstrap</h2>   
+                    <h2 class="h2-no-margin"><i class="fab fa-js"></i> JavaScript</h2> 
+                    <h2 class="h2-no-margin"><i class="fab fa-js"></i> JQuery</h2>                              
+                </div>   
+
+                <div class="flex-container">                    
+                    <h2 class="h2-no-margin"><i class="fab fa-mdb"></i> MongoDB</h2>
+                    <h2 class="h2-no-margin"><i class="fab fa-node-js"></i> ExpressJS</h2>
+                    <h2 class="h2-no-margin"><i class="fab fa-react"></i> React</h2>
+                    <h2 class="h2-no-margin"><i class="fab fa-node"></i> NodeJS</h2>  
+                    <h2 class="h2-no-margin"><i class="fab fa-react"></i> ReactNative</h2> 
+                    <h2 class="h2-no-margin"><i class="fab fa-git-alt"></i> Git/Version control</h2>    
+                </div>     
+            </div>            
+        </div>
+
+        <h1>My Portfolio</h1>
+
+        <div class="portfolio" id="portfolio">           
+
+            <div class="project-container">
+                <div>
+                    <img class="project-img" src="img/ecommerce.png" alt="E-commerce">
+                </div>
+                <div class="project-desc">
+                    <h2>E-Commerce Web App</h2>
+                    <div class="project-stack">
+                        <i class="skill-icon fab fa-sass"></i>
+                        <i class="fab fa-mdb"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>                  
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="project-container">
+                <div>
+                    <img class="project-img" src="img/ecommerce.png" alt="E-commerce">
+                </div>
+                <div class="project-desc">
+                    <h2>Forkify Web App</h2>
+                    <div class="project-stack">
+                        <i class="skill-icon fab fa-sass"></i>
+                        <i class="fab fa-mdb"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>                  
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="project-container">
+                <div>
+                    <img class="project-img" src="img/ecommerce.png" alt="E-commerce">
+                </div>
+                <div class="project-desc">
+                    <h2>Mapty Web App</h2>
+                    <div class="project-stack">
+                        <i class="skill-icon fab fa-sass"></i>
+                        <i class="fab fa-mdb"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>                  
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="project-container">
+                <div>
+                    <img class="project-img" src="img/ecommerce.png" alt="E-commerce">
+                </div>
+                <div class="project-desc">
+                    <h2>Progressive Web App</h2>
+                    <div class="project-stack">
+                        <i class="skill-icon fab fa-sass"></i>
+                        <i class="fab fa-mdb"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>                  
+                    </div>                    
+                </div>
+            </div>
+
+
+            <div class="project-container">
+                <div>
+                    <img class="project-img" src="img/ecommerce.png" alt="E-commerce">
+                </div>
+                <div class="project-desc">
+                    <h2>Landing Page #1</h2>
+                    <div class="project-stack">
+                        <i class="skill-icon fab fa-sass"></i>
+                        <i class="fab fa-mdb"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>                  
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="project-container">
+                <div>
+                    <img class="project-img" src="img/ecommerce.png" alt="E-commerce">
+                </div>
+                <div class="project-desc">
+                    <h2>Landing Page #2</h2>
+                    <div class="project-stack">
+                        <i class="skill-icon fab fa-sass"></i>
+                        <i class="fab fa-mdb"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>                  
+                    </div>                    
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+    </section>
+
+
+    
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
